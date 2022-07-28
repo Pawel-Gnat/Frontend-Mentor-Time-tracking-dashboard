@@ -18,17 +18,17 @@
 		<section>
 
 			<div class="profile-card">
-				<div class="profile">
+				<figure class="profile">
 					<img src="./images/image-jeremy.png" alt="Jeremy Robson's photo" class="profile__image">
-					<div class="profile__textarea">
+					<figcaption class="profile__textarea">
 						<p class="profile__textarea--report">Report for</p>
 						<p class="profile__textarea--owner">Jeremy Robson</p>
-					</div>
-					<div class="timeframe">
-						<button class="timeframe__daily">Daily</button>
-						<button class="timeframe__weekly">Weekly</button>
-						<button class="timeframe__monthly">Monthly</button>
-					</div>
+					</figcaption>
+				</figure>
+				<div class="timeframe">
+					<button class="timeframe__btn" id="daily_btn">Daily</button>
+					<button class="timeframe__btn" id="monthly_btn">Weekly</button>
+					<button class="timeframe__btn" id="monthly_btn">Monthly</button>
 				</div>
 			</div>
 
@@ -42,9 +42,17 @@
 							<span class="dot"></span>
 						</button>
 					</div>
-					<div class="data-container__bottom-area">
-						<p class="data-container__bottom-area--current-duration">32hrs</p>
-						<p class="data-container__bottom-area--last-duration">Last Week - 36hrs</p>
+					<div class="data-container__bottom-area-daily">
+						<p class="data-container__bottom-area-daily--current"></p>
+						<p class="data-container__bottom-area-daily--last"></p>
+					</div>
+					<div class="data-container__bottom-area-weekly">
+						<p class="data-container__bottom-area-weekly--current"></p>
+						<p class="data-container__bottom-area-weekly--last">Last Week - hrs</p>
+					</div>
+					<div class="data-container__bottom-area-monthly">
+						<p class="data-container__bottom-area-monthly--current">hrs</p>
+						<p class="data-container__bottom-area-monthly--last">Last Month - hrs</p>
 					</div>
 				</div>
 			</div>

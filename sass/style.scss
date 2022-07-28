@@ -19,11 +19,184 @@ html {
 body {
 	font-family: 'Rubik', sans-serif;
 	min-height: 100vh;
+	margin: 8rem 2.5rem 3rem;
+	background-color: $very-dark-blue;
 }
 
 /* SECTION */
 
+section {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.profile-card {
+	border-radius: 1.5rem;
+	background-color: $dark-blue;
+	overflow: hidden;
+
+	.profile {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		padding: 3rem;
+		border-radius: 1.5rem;
+		background-color: $blue;
+		transform: translate3d(0, -13rem, 0);
+
+		&__image {
+			width: 7rem;
+			height: 7rem;
+			border: 3px solid white;
+			border-radius: 50%;
+		}
+
+		&__textarea {
+			&--report {
+				font-size: 1.5rem;
+				margin-bottom: 0.1rem;
+				color: $pale-blue;
+			}
+
+			&--owner {
+				font-size: 2.4rem;
+				font-weight: 300;
+				color: white;
+			}
+		}
+	}
+
+	.timeframe {
+		display: flex;
+		justify-content: space-between;
+		margin: 2rem 3rem;
+
+		&__btn {
+			font-family: 'Rubik', sans-serif;
+			font-size: 1.5rem;
+			font-weight: 400;
+			border: none;
+			background-color: transparent;
+			color: $pale-blue;
+			opacity: 0.6;
+			transition: opacity 0.3s, color 0.3s;
+			cursor: pointer;
+		}
+	}
+}
+
+.work-card {
+	position: relative;
+	height: 16rem;
+	border-radius: 1.5rem;
+	background: url('../images/icon-work.svg') right 1.5rem top -1rem no-repeat, $light-red-work;
+	overflow: hidden;
+
+	.data-container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 3rem 2.5rem;
+		border-radius: 1.3rem;
+		background-color: $dark-blue;
+
+		&__top-area {
+			font-size: 1.8rem;
+			font-weight: 500;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1rem;
+			color: white;
+
+			button {
+				display: flex;
+				gap: 3px;
+				border: none;
+				padding: 0.5rem;
+				background-color: transparent;
+				cursor: pointer;
+
+				.dot {
+					height: 5px;
+					width: 5px;
+					border-radius: 50%;
+					background-color: $pale-blue;
+					opacity: 0.8;
+					transition: opacity 0.5s, color 0.5s;
+				}
+			}
+		}
+
+		&__bottom-area-daily, &__bottom-area-weekly, &__bottom-area-monthly {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&--current {
+				font-size: 2.4rem;
+				font-weight: 300;
+				color: white;
+			}
+
+			&--last {
+				font-size: 1.5rem;
+				color: $desaturated-blue;
+			}
+		}
+	}
+}
+
+.display {
+	display: block;
+}
+
+footer {
+	text-align: center;
+	color: white;
+
+	a {
+		color: $pale-blue;
+	}
+}
+
 /* HOVERS */
+
+.profile-card {
+	.timeframe {
+		&__btn:hover {
+			color: white;
+			opacity: 1;
+		}
+	}
+}
+
+.work-card {
+	.data-container {
+		&__top-area {
+			button:hover {
+				.dot {
+					background-color: white;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+/* ANIMATIONS */
+
+@keyframes profileSlideIn {
+	from {
+		transform: translate3d(0, -13rem, 0);
+	}
+
+	to {
+		transform: translate3d(0, 0rem, 0);
+	}
+}
 
 /* MEDIA QUERIES */
 

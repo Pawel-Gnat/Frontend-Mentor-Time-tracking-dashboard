@@ -18,9 +18,208 @@ html {
 body {
   font-family: 'Rubik', sans-serif;
   min-height: 100vh;
+  margin: 8rem 2.5rem 3rem;
+  background-color: #0f1424;
 }
 
 /* SECTION */
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  border-radius: 1.5rem;
+  background-color: #1c1f4a;
+  overflow: hidden;
+}
+
+.profile-card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background-color: #664fc9;
+  -webkit-transform: translate3d(0, -13rem, 0);
+          transform: translate3d(0, -13rem, 0);
+}
+
+.profile-card .profile__image {
+  width: 7rem;
+  height: 7rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.profile-card .profile__textarea--report {
+  font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+  color: #bdc1ff;
+}
+
+.profile-card .profile__textarea--owner {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: white;
+}
+
+.profile-card .timeframe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 3rem;
+}
+
+.profile-card .timeframe__btn {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: #bdc1ff;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s, color 0.3s;
+  transition: opacity 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.work-card {
+  position: relative;
+  height: 16rem;
+  border-radius: 1.5rem;
+  background: url("../images/icon-work.svg") right 1.5rem top -1rem no-repeat, #ff8c66;
+  overflow: hidden;
+}
+
+.work-card .data-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  border-radius: 1.3rem;
+  background-color: #1c1f4a;
+}
+
+.work-card .data-container__top-area {
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.work-card .data-container__top-area button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  border: none;
+  padding: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.work-card .data-container__top-area button .dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #bdc1ff;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s, color 0.5s;
+  transition: opacity 0.5s, color 0.5s;
+}
+
+.work-card .data-container__bottom-area-daily, .work-card .data-container__bottom-area-weekly, .work-card .data-container__bottom-area-monthly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-card .data-container__bottom-area-daily--current, .work-card .data-container__bottom-area-weekly--current, .work-card .data-container__bottom-area-monthly--current {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: white;
+}
+
+.work-card .data-container__bottom-area-daily--last, .work-card .data-container__bottom-area-weekly--last, .work-card .data-container__bottom-area-monthly--last {
+  font-size: 1.5rem;
+  color: #6f76c8;
+}
+
+.display {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  color: #bdc1ff;
+}
+
 /* HOVERS */
+.profile-card .timeframe__btn:hover {
+  color: white;
+  opacity: 1;
+}
+
+.work-card .data-container__top-area button:hover .dot {
+  background-color: white;
+  opacity: 1;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes profileSlideIn {
+  from {
+    -webkit-transform: translate3d(0, -13rem, 0);
+            transform: translate3d(0, -13rem, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0rem, 0);
+            transform: translate3d(0, 0rem, 0);
+  }
+}
+@keyframes profileSlideIn {
+  from {
+    -webkit-transform: translate3d(0, -13rem, 0);
+            transform: translate3d(0, -13rem, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0rem, 0);
+            transform: translate3d(0, 0rem, 0);
+  }
+}
+
 /* MEDIA QUERIES */
 /*# sourceMappingURL=style.css.map */
