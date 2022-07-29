@@ -21,6 +21,15 @@ async function worktimeData() {
 		dailyBtn.classList.add('active')
 	}
 	displayDaily()
+	
+	// jak byś chciał dodałem funkcje nasłuchuje na kliknięty klawisz i dodaje do niego klase "active" 
+	function SeletcetBtn(btn){
+		document.querySelectorAll('.timeframe__btn').forEach(button =>{
+			button.classList.remove('active')
+		})
+		btn.classList.add('active')
+
+	}
 
 	dailyBtn.addEventListener('click', e => {
 		for (let i = 0; i < data.length; i++) {
@@ -28,6 +37,7 @@ async function worktimeData() {
 
 			lastTasks[i].innerText = 'Yesterday - ' + data[i].timeframes.daily.previous + 'hrs'
 		}
+		SeletcetBtn(dailyBtn)
 	})
 
 	weeklyBtn.addEventListener('click', e => {
@@ -36,6 +46,8 @@ async function worktimeData() {
 
 			lastTasks[i].innerText = 'Last Week - ' + data[i].timeframes.weekly.previous + 'hrs'
 		}
+// 		a tu wywołanie tej funkcji w każdym przycisku
+		SeletcetBtn(weeklyBtn)
 	})
 
 	monthlyBtn.addEventListener('click', e => {
@@ -44,6 +56,7 @@ async function worktimeData() {
 
 			lastTasks[i].innerText = 'Last Month - ' + data[i].timeframes.monthly.previous + 'hrs'
 		}
+		SeletcetBtn(monthlyBtn)
 	})
 }
 worktimeData()
