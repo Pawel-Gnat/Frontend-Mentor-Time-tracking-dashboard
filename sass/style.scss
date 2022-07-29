@@ -87,7 +87,16 @@ section {
 	}
 }
 
-.work-card {
+.active {
+	color: white;
+}
+
+.work-card,
+.play-card,
+.study-card,
+.exercise-card,
+.social-card,
+.selfcare-card {
 	position: relative;
 	height: 16rem;
 	border-radius: 1.5rem;
@@ -130,7 +139,7 @@ section {
 			}
 		}
 
-		&__bottom-area-daily, &__bottom-area-weekly, &__bottom-area-monthly {
+		&__bottom-area {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -149,8 +158,24 @@ section {
 	}
 }
 
-.display {
-	display: block;
+.play-card {
+	background: url('../images/icon-play.svg') right 1.5rem top -1rem no-repeat, $soft-blue-play;
+}
+
+.study-card {
+	background: url('../images/icon-study.svg') right 1.5rem top -1rem no-repeat, $light-red-study;
+}
+
+.exercise-card {
+	background: url('../images/icon-exercise.svg') right 1.5rem top -1rem no-repeat, $lime-green-exercise;
+}
+
+.social-card {
+	background: url('../images/icon-social.svg') right 1.5rem top -1rem no-repeat, $violet-social;
+}
+
+.selfcare-card {
+	background: url('../images/icon-self-care.svg') right 1.5rem top -1rem no-repeat, $soft-orange-self-care;
 }
 
 footer {
@@ -173,7 +198,13 @@ footer {
 	}
 }
 
-.work-card {
+.work-card,
+.play-card,
+.study-card,
+.social-card,
+.exercise-card,
+.social-card,
+.selfcare-card {
 	.data-container {
 		&__top-area {
 			button:hover {

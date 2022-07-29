@@ -98,7 +98,16 @@ section {
   cursor: pointer;
 }
 
-.work-card {
+.active {
+  color: white;
+}
+
+.work-card,
+.play-card,
+.study-card,
+.exercise-card,
+.social-card,
+.selfcare-card {
   position: relative;
   height: 16rem;
   border-radius: 1.5rem;
@@ -106,7 +115,12 @@ section {
   overflow: hidden;
 }
 
-.work-card .data-container {
+.work-card .data-container,
+.play-card .data-container,
+.study-card .data-container,
+.exercise-card .data-container,
+.social-card .data-container,
+.selfcare-card .data-container {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -115,7 +129,12 @@ section {
   background-color: #1c1f4a;
 }
 
-.work-card .data-container__top-area {
+.work-card .data-container__top-area,
+.play-card .data-container__top-area,
+.study-card .data-container__top-area,
+.exercise-card .data-container__top-area,
+.social-card .data-container__top-area,
+.selfcare-card .data-container__top-area {
   font-size: 1.8rem;
   font-weight: 500;
   display: -webkit-box;
@@ -131,7 +150,12 @@ section {
   color: white;
 }
 
-.work-card .data-container__top-area button {
+.work-card .data-container__top-area button,
+.play-card .data-container__top-area button,
+.study-card .data-container__top-area button,
+.exercise-card .data-container__top-area button,
+.social-card .data-container__top-area button,
+.selfcare-card .data-container__top-area button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +166,12 @@ section {
   cursor: pointer;
 }
 
-.work-card .data-container__top-area button .dot {
+.work-card .data-container__top-area button .dot,
+.play-card .data-container__top-area button .dot,
+.study-card .data-container__top-area button .dot,
+.exercise-card .data-container__top-area button .dot,
+.social-card .data-container__top-area button .dot,
+.selfcare-card .data-container__top-area button .dot {
   height: 5px;
   width: 5px;
   border-radius: 50%;
@@ -152,7 +181,12 @@ section {
   transition: opacity 0.5s, color 0.5s;
 }
 
-.work-card .data-container__bottom-area-daily, .work-card .data-container__bottom-area-weekly, .work-card .data-container__bottom-area-monthly {
+.work-card .data-container__bottom-area,
+.play-card .data-container__bottom-area,
+.study-card .data-container__bottom-area,
+.exercise-card .data-container__bottom-area,
+.social-card .data-container__bottom-area,
+.selfcare-card .data-container__bottom-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,19 +198,45 @@ section {
           align-items: center;
 }
 
-.work-card .data-container__bottom-area-daily--current, .work-card .data-container__bottom-area-weekly--current, .work-card .data-container__bottom-area-monthly--current {
+.work-card .data-container__bottom-area--current,
+.play-card .data-container__bottom-area--current,
+.study-card .data-container__bottom-area--current,
+.exercise-card .data-container__bottom-area--current,
+.social-card .data-container__bottom-area--current,
+.selfcare-card .data-container__bottom-area--current {
   font-size: 2.4rem;
   font-weight: 300;
   color: white;
 }
 
-.work-card .data-container__bottom-area-daily--last, .work-card .data-container__bottom-area-weekly--last, .work-card .data-container__bottom-area-monthly--last {
+.work-card .data-container__bottom-area--last,
+.play-card .data-container__bottom-area--last,
+.study-card .data-container__bottom-area--last,
+.exercise-card .data-container__bottom-area--last,
+.social-card .data-container__bottom-area--last,
+.selfcare-card .data-container__bottom-area--last {
   font-size: 1.5rem;
   color: #6f76c8;
 }
 
-.display {
-  display: block;
+.play-card {
+  background: url("../images/icon-play.svg") right 1.5rem top -1rem no-repeat, #56c2e6;
+}
+
+.study-card {
+  background: url("../images/icon-study.svg") right 1.5rem top -1rem no-repeat, #ff5c7c;
+}
+
+.exercise-card {
+  background: url("../images/icon-exercise.svg") right 1.5rem top -1rem no-repeat, #4acf81;
+}
+
+.social-card {
+  background: url("../images/icon-social.svg") right 1.5rem top -1rem no-repeat, #7536d3;
+}
+
+.selfcare-card {
+  background: url("../images/icon-self-care.svg") right 1.5rem top -1rem no-repeat, #f1c65b;
 }
 
 footer {
@@ -194,7 +254,13 @@ footer a {
   opacity: 1;
 }
 
-.work-card .data-container__top-area button:hover .dot {
+.work-card .data-container__top-area button:hover .dot,
+.play-card .data-container__top-area button:hover .dot,
+.study-card .data-container__top-area button:hover .dot,
+.social-card .data-container__top-area button:hover .dot,
+.exercise-card .data-container__top-area button:hover .dot,
+.social-card .data-container__top-area button:hover .dot,
+.selfcare-card .data-container__top-area button:hover .dot {
   background-color: white;
   opacity: 1;
 }
