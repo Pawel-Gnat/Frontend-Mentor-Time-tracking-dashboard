@@ -98,8 +98,9 @@ section {
   cursor: pointer;
 }
 
-.active {
+.profile-card .timeframe .active {
   color: white;
+  opacity: 1;
 }
 
 .work-card,
@@ -122,7 +123,7 @@ section {
 .social-card .data-container,
 .selfcare-card .data-container {
   position: absolute;
-  bottom: 0;
+  bottom: -12rem;
   width: 100%;
   padding: 3rem 2.5rem;
   border-radius: 1.3rem;
@@ -219,6 +220,16 @@ section {
   color: #6f76c8;
 }
 
+.work-card .movecard,
+.play-card .movecard,
+.study-card .movecard,
+.exercise-card .movecard,
+.social-card .movecard,
+.selfcare-card .movecard {
+  -webkit-animation: 1s forwards ease-in cardsMove;
+          animation: 1s forwards ease-in cardsMove;
+}
+
 .play-card {
   background: url("../images/icon-play.svg") right 1.5rem top -1rem no-repeat, #56c2e6;
 }
@@ -284,6 +295,48 @@ footer a {
   to {
     -webkit-transform: translate3d(0, 0rem, 0);
             transform: translate3d(0, 0rem, 0);
+  }
+}
+
+@-webkit-keyframes cardsSlideIn {
+  from {
+    bottom: -12rem;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes cardsSlideIn {
+  from {
+    bottom: -12rem;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes cardsMove {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -12rem;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes cardsMove {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -12rem;
+  }
+  100% {
+    bottom: 0;
   }
 }
 

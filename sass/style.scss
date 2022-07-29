@@ -84,11 +84,12 @@ section {
 			transition: opacity 0.3s, color 0.3s;
 			cursor: pointer;
 		}
-	}
-}
 
-.active {
-	color: white;
+		.active {
+			color: white;
+			opacity: 1;
+		}
+	}
 }
 
 .work-card,
@@ -105,7 +106,7 @@ section {
 
 	.data-container {
 		position: absolute;
-		bottom: 0;
+		bottom: -12rem;
 		width: 100%;
 		padding: 3rem 2.5rem;
 		border-radius: 1.3rem;
@@ -155,6 +156,10 @@ section {
 				color: $desaturated-blue;
 			}
 		}
+	}
+
+	.movecard {
+		animation: 1s forwards ease-in cardsMove;
 	}
 }
 
@@ -226,6 +231,30 @@ footer {
 
 	to {
 		transform: translate3d(0, 0rem, 0);
+	}
+}
+
+@keyframes cardsSlideIn {
+	from {
+		bottom: -12rem;
+	}
+
+	to {
+		bottom: 0;
+	}
+}
+
+@keyframes cardsMove {
+	0% {
+		bottom: 0;
+	}
+
+	50% {
+		bottom: -12rem;
+	}
+
+	100% {
+		bottom: 0;
 	}
 }
 
