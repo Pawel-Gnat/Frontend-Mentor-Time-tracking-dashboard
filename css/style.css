@@ -134,7 +134,6 @@ section {
   width: 100%;
   max-width: 50rem;
   border-radius: 1.5rem;
-  background: url("../images/icon-work.svg") right 1.5rem top -1rem no-repeat, #ff8c66;
   overflow: hidden;
 }
 
@@ -242,7 +241,8 @@ section {
 .social-card .data-container__bottom-area--last,
 .selfcare-card .data-container__bottom-area--last {
   font-size: 1.5rem;
-  color: #6f76c8;
+  color: #bdc1ff;
+  opacity: 0.8;
 }
 
 .work-card .movecard,
@@ -253,6 +253,10 @@ section {
 .selfcare-card .movecard {
   -webkit-animation: 1s forwards ease-in cardsMove;
           animation: 1s forwards ease-in cardsMove;
+}
+
+.work-card {
+  background: url("../images/icon-work.svg") right 1.5rem top -1rem no-repeat, #ff8c66;
 }
 
 .play-card {
@@ -335,7 +339,7 @@ footer a {
 
 @-webkit-keyframes cardsSlideIn {
   from {
-    bottom: -12rem;
+    bottom: -22rem;
   }
   to {
     bottom: 0;
@@ -344,7 +348,7 @@ footer a {
 
 @keyframes cardsSlideIn {
   from {
-    bottom: -12rem;
+    bottom: -22rem;
   }
   to {
     bottom: 0;
@@ -356,7 +360,7 @@ footer a {
     bottom: 0;
   }
   50% {
-    bottom: -12rem;
+    bottom: -22rem;
   }
   100% {
     bottom: 0;
@@ -368,7 +372,7 @@ footer a {
     bottom: 0;
   }
   50% {
-    bottom: -12rem;
+    bottom: -22rem;
   }
   100% {
     bottom: 0;
@@ -380,8 +384,8 @@ footer a {
   section {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (minmax(auto, 25.5rem))[4];
+        grid-template-columns: repeat(4, minmax(auto, 25.5rem));
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
     grid-column-gap: 30px;
@@ -479,11 +483,7 @@ footer a {
   .social-card,
   .selfcare-card {
     height: 24.5rem;
-    width: 100%;
     max-width: 50rem;
-    border-radius: 1.5rem;
-    background: url("../images/icon-work.svg") right 1.5rem top -1rem no-repeat, #ff8c66;
-    overflow: hidden;
   }
   .work-card .data-container,
   .play-card .data-container,
@@ -491,64 +491,7 @@ footer a {
   .exercise-card .data-container,
   .social-card .data-container,
   .selfcare-card .data-container {
-    position: absolute;
-    bottom: -12rem;
-    width: 100%;
-    padding: 3rem 2.5rem;
-    border-radius: 1.3rem;
-    background-color: #1c1f4a;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    cursor: pointer;
-  }
-  .work-card .data-container__top-area,
-  .play-card .data-container__top-area,
-  .study-card .data-container__top-area,
-  .exercise-card .data-container__top-area,
-  .social-card .data-container__top-area,
-  .selfcare-card .data-container__top-area {
-    font-size: 1.8rem;
-    font-weight: 500;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 1rem;
-    color: white;
-  }
-  .work-card .data-container__top-area button,
-  .play-card .data-container__top-area button,
-  .study-card .data-container__top-area button,
-  .exercise-card .data-container__top-area button,
-  .social-card .data-container__top-area button,
-  .selfcare-card .data-container__top-area button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 3px;
-    border: none;
-    padding: 0.5rem;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .work-card .data-container__top-area button .dot,
-  .play-card .data-container__top-area button .dot,
-  .study-card .data-container__top-area button .dot,
-  .exercise-card .data-container__top-area button .dot,
-  .social-card .data-container__top-area button .dot,
-  .selfcare-card .data-container__top-area button .dot {
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    background-color: #bdc1ff;
-    opacity: 0.8;
-    -webkit-transition: opacity 0.5s, color 0.5s;
-    transition: opacity 0.5s, color 0.5s;
+    bottom: -22rem;
   }
   .work-card .data-container__bottom-area,
   .play-card .data-container__bottom-area,
@@ -559,12 +502,13 @@ footer a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .work-card .data-container__bottom-area--current,
   .play-card .data-container__bottom-area--current,
@@ -572,9 +516,8 @@ footer a {
   .exercise-card .data-container__bottom-area--current,
   .social-card .data-container__bottom-area--current,
   .selfcare-card .data-container__bottom-area--current {
-    font-size: 2.4rem;
-    font-weight: 300;
-    color: white;
+    font-size: 5.5rem;
+    margin: 1.5rem 0 1rem;
   }
   .work-card .data-container__bottom-area--last,
   .play-card .data-container__bottom-area--last,
@@ -583,7 +526,6 @@ footer a {
   .social-card .data-container__bottom-area--last,
   .selfcare-card .data-container__bottom-area--last {
     font-size: 1.5rem;
-    color: #6f76c8;
   }
 }
 /*# sourceMappingURL=style.css.map */
